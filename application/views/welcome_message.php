@@ -26,9 +26,8 @@
 	<!--  CSS for Demo Purpose, don't include it in your project     -->
 	<link href="<?= base_url('paper-dashboard-master/assets/') ?>css/demo.css" rel="stylesheet" />
 
-
 	<!--  Fonts and icons     -->
-	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
 	<link href="<?= base_url('paper-dashboard-master/assets/') ?>css/themify-icons.css" rel="stylesheet">
 
@@ -89,7 +88,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="notifications.html">
+						<a href="<?= base_url('auth/login') ?>">
 							<i class="ti-bell"></i>
 							<p>Notifications</p>
 						</a>
