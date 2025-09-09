@@ -9,3 +9,29 @@
 
 </body>
 </html>
+application/
+├── controllers/
+│   ├── Auth.php
+│   ├── Users.php
+│   ├── Materi.php
+│   ├── Quiz.php          <-- CRUD Quiz
+│   └── QuizQuestions.php <-- CRUD Pertanyaan Quiz
+│
+├── models/
+│   ├── User_model.php
+│   ├── Materi_model.php
+│   ├── Quiz_model.php
+│   └── QuizQuestion_model.php
+│
+├── views/
+│   ├── auth/
+│   │   ├── login.php
+│   │   └── register.php
+│   ├── quiz/
+│   │   ├── index.php     <-- daftar quiz
+│   │   ├── create.php    <-- form tambah quiz
+│   │   └── edit.php
+│   └── quiz_questions/
+│       ├── index.php     <-- daftar pertanyaan
+│       ├── create.php    <-- form tambah pertanyaan
+│       └── edit.php
