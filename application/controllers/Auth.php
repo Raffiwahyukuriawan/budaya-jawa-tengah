@@ -22,7 +22,7 @@ class Auth extends CI_Controller {
                 redirect('auth/login');
             }
         } else {
-            $this->load->view('auth/login');
+            $this->load->view('login');
         }
     }
 

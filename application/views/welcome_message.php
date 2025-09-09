@@ -27,9 +27,10 @@
 	<link href="<?= base_url('paper-dashboard-master/assets/') ?>css/demo.css" rel="stylesheet" />
 
 	<!--  Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
 	<link href="<?= base_url('paper-dashboard-master/assets/') ?>css/themify-icons.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
@@ -53,49 +54,49 @@
 				<ul class="nav">
 					<li class="active">
 						<a href="dashboard.html">
-							<i class="ti-panel"></i>
+							<i class="fa fa-tachometer"></i>
 							<p>Dashboard</p>
 						</a>
 					</li>
 					<li>
 						<a href="user.html">
-							<i class="ti-user"></i>
+							<i class="fa fa-user"></i>
 							<p>User Profile</p>
 						</a>
 					</li>
 					<li>
 						<a href="table.html">
-							<i class="ti-view-list-alt"></i>
+							<i class="fa fa-table"></i>
 							<p>Table List</p>
 						</a>
 					</li>
 					<li>
 						<a href="typography.html">
-							<i class="ti-text"></i>
+							<i class="fa fa-font"></i>
 							<p>Typography</p>
 						</a>
 					</li>
 					<li>
 						<a href="icons.html">
-							<i class="ti-pencil-alt2"></i>
+							<i class="fa fa-star"></i>
 							<p>Icons</p>
 						</a>
 					</li>
 					<li>
 						<a href="maps.html">
-							<i class="ti-map"></i>
+							<i class="fa fa-map"></i>
 							<p>Maps</p>
 						</a>
 					</li>
 					<li>
 						<a href="<?= base_url('auth/login') ?>">
-							<i class="ti-bell"></i>
-							<p>Notifications</p>
+							<i class="fa fa-users"></i>
+							<p>Users</p>
 						</a>
 					</li>
 					<li class="active-pro">
 						<a href="upgrade.html">
-							<i class="ti-export"></i>
+							<i class="fa fa-arrow-up"></i>
 							<p>Upgrade to PRO</p>
 						</a>
 					</li>
@@ -125,7 +126,7 @@
 							</li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-									<i class="ti-bell"></i>
+									<i class="fa fa-bell"></i>
 									<p class="notification">5</p>
 									<p>Notifications</p>
 									<b class="caret"></b>
@@ -140,7 +141,7 @@
 							</li>
 							<li>
 								<a href="#">
-									<i class="ti-settings"></i>
+									<i class="fa fa-gear"></i>
 									<p>Settings</p>
 								</a>
 							</li>
@@ -160,7 +161,7 @@
 									<div class="row">
 										<div class="col-xs-5">
 											<div class="icon-big icon-warning text-center">
-												<i class="ti-server"></i>
+												<i class="fa fa-server"></i>
 											</div>
 										</div>
 										<div class="col-xs-7">
@@ -173,7 +174,7 @@
 									<div class="footer">
 										<hr />
 										<div class="stats">
-											<i class="ti-reload"></i> Updated now
+											<i class="fa fa-reload"></i> Updated now
 										</div>
 									</div>
 								</div>
