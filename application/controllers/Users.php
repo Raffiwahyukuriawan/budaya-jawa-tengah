@@ -1,20 +1,28 @@
 <?php
-class Users extends CI_Controller {
+class Users extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
-        if (!$this->session->userdata('logged_in')) {
-            redirect('auth/login');
-        }
+        // if (!$this->session->userdata('logged_in')) {
+        //     redirect('auth/login');
+        // }
         $this->load->model('User_model');
     }
 
-    public function index() {
-        $data['users'] = $this->User_model->get_all();
-        $this->load->view('users/index', $data);
+    public function index()
+    {
+        $this->load->view('template/header');
+        $this->load->view('template/sidebar');
+        $this->load->view('user');
+        $this->load->view('template/footer');
+        // $data['users'] = $this->User_model->get_all();
+        // $this->load->view('users/index', $data);
     }
 
-    public function create() {
+    public function create()
+    {
         if ($this->input->post()) {
             $data = [
                 'username' => $this->input->post('username'),
@@ -28,7 +36,8 @@ class Users extends CI_Controller {
         $this->load->view('users/create');
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $data['user'] = $this->User_model->get_by_id($id);
         if ($this->input->post()) {
             $updateData = [
@@ -45,7 +54,8 @@ class Users extends CI_Controller {
         $this->load->view('users/edit', $data);
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $this->User_model->delete($id);
         redirect('users');
     }
