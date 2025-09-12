@@ -13,13 +13,13 @@ class Users extends CI_Controller
 
     public function index()
     {
+        $data['users'] = $this->User_model->get_all();
         $this->load->view('template/header');
         $this->load->view('template/sidebar');
-        $this->load->view('user');
+        $this->load->view('user', $data); // kirim data ke view
         $this->load->view('template/footer');
-        // $data['users'] = $this->User_model->get_all();
-        // $this->load->view('users/index', $data);
     }
+
 
     public function create()
     {
@@ -30,10 +30,13 @@ class Users extends CI_Controller
                 'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
                 'role'     => $this->input->post('role')
             ];
-            $this->User_model->insert($data);
+            if ($this->User_model->insert($data)) {
+                $this->session->set_flashdata('success', 'User berhasil ditambahkan!');
+            } else {
+                $this->session->set_flashdata('error', 'Gagal menambahkan user.');
+            }
             redirect('users');
         }
-        $this->load->view('users/create');
     }
 
     public function edit($id)
@@ -48,15 +51,22 @@ class Users extends CI_Controller
             if ($this->input->post('password')) {
                 $updateData['password'] = password_hash($this->input->post('password'), PASSWORD_BCRYPT);
             }
-            $this->User_model->update($id, $updateData);
+            if ($this->User_model->update($id, $updateData)) {
+                $this->session->set_flashdata('success', 'User berhasil diupdate!');
+            } else {
+                $this->session->set_flashdata('error', 'Gagal mengupdate user.');
+            }
             redirect('users');
         }
-        $this->load->view('users/edit', $data);
     }
 
     public function delete($id)
     {
-        $this->User_model->delete($id);
+        if ($this->User_model->delete($id)) {
+            $this->session->set_flashdata('success', 'User berhasil dihapus!');
+        } else {
+            $this->session->set_flashdata('error', 'Gagal menghapus user.');
+        }
         redirect('users');
     }
 }

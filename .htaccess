@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /admin-web-edukasi/
+    RewriteBase /web-edukasi-jawa-tengah/
 
     # Redirect yang masih ada index.php
     RewriteCond %{THE_REQUEST} ^.*/index\.php

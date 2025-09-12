@@ -6,6 +6,46 @@
 </div>
 </div>
 </div>
+
+<!-- Load SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+	<?php if ($this->session->flashdata('success')): ?>
+		Swal.fire({
+			title: "Berhasil!",
+			text: "<?= $this->session->flashdata('success'); ?>",
+			icon: "success"
+		});
+	<?php elseif ($this->session->flashdata('error')): ?>
+		Swal.fire({
+			title: "Gagal!",
+			text: "<?= $this->session->flashdata('error'); ?>",
+			icon: "error"
+		});
+	<?php endif; ?>
+</script>
+
+<script>
+	function confirmDelete(userId) {
+		Swal.fire({
+			title: "Anda Yakin?",
+			text: "User ini akan dihapus!",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#3085d6",
+			cancelButtonColor: "#d33",
+			confirmButtonText: "Ya, Hapus!",
+			cancelButtonText: "Batal"
+		}).then((result) => {
+			if (result.isConfirmed) {
+				// Redirect ke controller delete
+				window.location.href = "<?= site_url('users/delete/') ?>" + userId;
+			}
+		});
+	}
+</script>
+
 <script src="<?= base_url('flexy-bootstrap-lite/') ?>assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="<?= base_url('flexy-bootstrap-lite/') ?>assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url('flexy-bootstrap-lite/') ?>assets/js/sidebarmenu.js"></script>
