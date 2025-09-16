@@ -125,3 +125,24 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function confirmDelete(userId) {
+        Swal.fire({
+            title: "Anda Yakin?",
+            text: "User ini akan dihapus!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Ya, Hapus!",
+            cancelButtonText: "Batal"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "<?= site_url('users/delete/') ?>" + userId;
+            }
+        });
+    }
+</script>

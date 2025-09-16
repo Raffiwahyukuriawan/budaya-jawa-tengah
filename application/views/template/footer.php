@@ -26,25 +26,7 @@
 	<?php endif; ?>
 </script>
 
-<script>
-	function confirmDelete(userId) {
-		Swal.fire({
-			title: "Anda Yakin?",
-			text: "User ini akan dihapus!",
-			icon: "warning",
-			showCancelButton: true,
-			confirmButtonColor: "#3085d6",
-			cancelButtonColor: "#d33",
-			confirmButtonText: "Ya, Hapus!",
-			cancelButtonText: "Batal"
-		}).then((result) => {
-			if (result.isConfirmed) {
-				// Redirect ke controller delete
-				window.location.href = "<?= site_url('users/delete/') ?>" + userId;
-			}
-		});
-	}
-</script>
+
 
 <script src="<?= base_url('flexy-bootstrap-lite/') ?>assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="<?= base_url('flexy-bootstrap-lite/') ?>assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
